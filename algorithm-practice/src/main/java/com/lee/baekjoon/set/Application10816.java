@@ -1,51 +1,52 @@
 package com.lee.baekjoon.set;
 
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
-import java.util.StringTokenizer;
+import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
+
 
 public class Application10816 {
     public static void main(String[] args) throws IOException {
-
         BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
-        StringBuilder sb=new StringBuilder();
+
 
         int N=Integer.parseInt(br.readLine());
-        int[] arr=new int[N];
-        StringTokenizer st=new StringTokenizer(br.readLine());
-        for(int i=0;i<N;i++){
-            arr[i]=Integer.parseInt(st.nextToken());
+
+        ConcurrentHashMap<Integer,Integer> map=new ConcurrentHashMap<>();
+
+        StringTokenizer st1=new StringTokenizer(br.readLine());
+
+        while(st1.hasMoreTokens()){
+            int n=Integer.parseInt(st1.nextToken());
+            if(map.containsKey(n)){
+                map.put(n,map.get(n)+1);
+            }else{
+                map.put(n,1);
+            }
         }
-        Arrays.sort(arr);
 
         int M=Integer.parseInt(br.readLine());
-        st=new StringTokenizer(br.readLine());
 
-        for(int i=0;i<M;i++){
-            int target=Integer.parseInt(st.nextToken());
-            sb.append(upper(arr,target)-lower(arr,target)).append(" ");
+
+        ArrayList<Integer> ans=new ArrayList<>();
+
+        StringTokenizer st3=new StringTokenizer(br.readLine());
+        while(st3.hasMoreTokens()){
+            int m=Integer.parseInt(st3.nextToken());
+            if(map.containsKey(m)){
+                ans.add(map.get(m));
+            }else{
+                ans.add(0);
+            }
         }
-        System.out.println(sb);
-    }
-    private static int lower(int[] arr, int target){
-        int left=0,right=arr.length;
-        while(left<right){
-            int mid=(left+right)/2;
-            if(arr[mid]>=target)right=mid;
-            else left=mid+1;
+
+        for(int i:ans){
+            System.out.print(i+" ");
         }
-        return left;
-    }
-    private static int upper(int[] arr, int target){
-        int left=0,right=arr.length;
-        while(left<right){
-            int mid=(left+right)/2;
-            if(arr[mid]>target)left=mid;
-            else left=mid+1;
-        }
-        return left;
+
+
+
     }
 }
