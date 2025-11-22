@@ -7,34 +7,35 @@ import java.io.InputStreamReader;
 public class Application4134 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int T = Integer.parseInt(br.readLine());
+        int N=Integer.parseInt(br.readLine());
+        StringBuilder sb=new StringBuilder();
 
-        long[]list=new long[T];
-
-        for(int i=0;i<T;i++){
-            long N=Long.parseLong(br.readLine());
-            if(N==0 || N==1){
-                list[i]=2;
-            }else if(N==2){
-                list[i]=2;
-            }else if(N==3){
-                list[i]=3;
-            }else {
-                for (long j = N; j <4_000_000_001L; j++) {
-                    if (isPrime(j)) {
-                        list[i] = j;
-                        break;
-                    }
+        for(int i=1;i<=N;i++){
+            long n=Long.parseLong(br.readLine());
+            //짝수인 경우
+            if(n==0 || n==1 || n==2){
+                sb.append(2).append("\n");
+            }
+            else if(n%2==0){
+                n++;
+                while(!isPrime(n)){
+                    n+=2;
                 }
+                sb.append(n).append("\n");
+            }
+            //홀수인 경우
+            else{
+                while(!isPrime(n)){
+                    n+=2;
+                }
+                sb.append(n).append("\n");
             }
         }
+        System.out.println(sb);
 
-        for(Long l:list){
-            System.out.println(l);
-        }
     }
     public static boolean  isPrime(long num){
-        for(long i=2;i*i<num;i++){
+        for(long i=2;i<Math.sqrt(num)+1;i++){
             if(num%i==0){
                 return false;
             }
