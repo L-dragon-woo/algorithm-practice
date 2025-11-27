@@ -57,7 +57,19 @@ HashMap은 일단 자바에서 키(key)와 값(Value)쌍을 저장하는 자료 
 ->이러한 멀티스레드 환경을 효율적으로 지원하기 위해서 **ConcurrentHashMap**을 사용하면 버킷/구역 단위로 lock을 걸어서 서로 다른 키에 대한 작업은 최대한 병렬로 돌게 한다.
 
 ---
+### Array
+>Array vs List
 
+1. Array는 **고정길이**를 갖지만 List는 **동적길이**를 갖는다.
+2. 속도는 Array와 ArrayList 둘다 빠르지만 **추가는 List가 월등히 빠르다**
+
+>Array: char[] vs String[]
+
+- char는 **primitive(원시타입)**이지만, String은 **객체(Object)**이기 때문에 메모리 구조와 생성 비용, 비교 방식, 변경 방식 등 **모든 면에서 차이가 난다**
+
+---
+
+  
 
 
 

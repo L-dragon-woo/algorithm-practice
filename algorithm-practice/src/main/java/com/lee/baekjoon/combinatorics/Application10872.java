@@ -1,24 +1,21 @@
-package com.lee.baekjoon.number_theory;
+package com.lee.baekjoon.combinatorics;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Application13909 {
+public class Application10872 {
     public static void main(String[] args) throws IOException {
         BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
-
         int N=Integer.parseInt(br.readLine());
-        //N보다 큰 완전수? 를 구하기
-        while(true){
-            double n=Math.sqrt(N);
-            if(n*n==N){
-                System.out.println((int)n);
-                break;
-            }else{
-                N--;
+        if(N==0){
+            System.out.println(1);
+        }else{
+            int c=1;
+            for(int i=2;i<=N;i++){
+                c*=i;
             }
+            System.out.println(c);
         }
-
     }
 }

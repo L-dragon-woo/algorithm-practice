@@ -12,14 +12,17 @@ public class Application9063 {
         int Xmin=10001;
         int Ymin=10001;
 
+        int x=Integer.MIN_VALUE;
+
         //입력 받기
         for(int i=0;i<N;i++){
             int a=sc.nextInt();
-            int b=sc.nextInt();
-            Xmax=Math.max(Xmax,a);
-            Ymax=Math.max(Ymax,b);
-            Xmin=Math.min(Xmin,a);
-            Ymin=Math.min(Ymin,b);
+            int b=sc.nextInt();// 20 24 // 40 21 // 10 12
+            Xmax=Math.max(Xmax,a);//Xmax=20 //40// 40
+            Ymax=Math.max(Ymax,b);//Ymax=24 //24//24
+            Xmin=Math.min(Xmin,a);//Xmin=20 //20//10
+            Ymin=Math.min(Ymin,b);//Ymin=24 //21//12
+            //30 * 12
         }
 
         System.out.println((Xmax-Xmin)*(Ymax-Ymin));
