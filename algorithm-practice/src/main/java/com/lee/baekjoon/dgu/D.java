@@ -18,28 +18,28 @@ public class D {
             String[] str = br.readLine().split("");
             grid[i] = Arrays.stream(str).mapToInt(Integer::parseInt).toArray();
         }
-        boolean found = true;
-        for (int i = 0; i < N-1; i++) {
-            for (int j = 0; j < M-1; j++) {
-                if (grid[i][j] == 1) {
-                    int width = 0;
-                    while (i + width < N && grid[i + width][j] == 1) {
-                        width++;
-                    }
-                    int height = 0;
-                    while (j + height < M && grid[i][j + height] == 1) {
-                        height++;
-                    }
-                    //종양있는지 판단
 
+        boolean a=false;
+        for(int i=0;i<N-1;i++){
+            for(int j=0;j<M-1;j++){
+                if(grid[i][j]==1){
+                    if(grid[i][j+1]==1){
+                        if(grid[i+1][j]==1){
+                            if(grid[i+1][j+1]==1){
+                                System.out.println(1);
+                                a=true;
+                                break;
+                            }
+                        }
+                    }
                 }
-
             }
-
+            if(a==true){
+                break;
+            }
         }
-        if (!found) {
-            System.out.println(1);
+        if(a==false){
+            System.out.println(0);
         }
-
     }
 }
