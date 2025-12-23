@@ -83,6 +83,13 @@ HashMap은 일단 자바에서 키(key)와 값(Value)쌍을 저장하는 자료 
 
 3. 다익스트라는 한 지점에서 다른 지점까지의 최단 거리이기 때문에 1차원 리스트에 저장한다. 하지만, 플로이드 워셜은 2차원 테이블에 최단 거리 정보를 저장한다.**(모든 지점에서 다른 모든 지점까지의 최단 거리를 저장해야 하기 때문이다.)**
 
+>점화식
+<img width="523" height="70" alt="image" src="https://github.com/user-attachments/assets/9148b2bb-ad7d-4cd7-841c-e293a4929956" />
+
+<img width="1200" height="485" alt="image" src="https://github.com/user-attachments/assets/bb15721a-a97f-4ff5-877e-e5f06a0760f6" />
+
+
+
 
 ---
 
