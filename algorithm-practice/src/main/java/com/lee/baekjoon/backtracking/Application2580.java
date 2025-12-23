@@ -3,12 +3,12 @@ package com.lee.baekjoon.backtracking;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
-import java.util.HashSet;
 import java.util.StringTokenizer;
 
 public class Application2580 {
     static int[][] arr=new int[9][9];
+    static int cnt;
+    static boolean flag=true;
     public static void main(String[] args) throws IOException {
         BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
         //배열 만들기
@@ -18,65 +18,80 @@ public class Application2580 {
                 arr[i][j]=Integer.parseInt(st.nextToken());
             }
         }
-        backtracking(0,0);
-        System.out.println(Arrays.deepToString(arr));
 
+        backtracking();
 
-
-    }
-    public static void backtracking(int i, int j){
-        HashSet<Integer> set=new HashSet<>();
-        for(int z=1;z<=9;z++){
-            set.add(z);
-        }
-        for(int k=i; k<9; k++){
-            for(int l=j; l<9; l++){
-             if(arr[k][l]==0){
-                 findrow(k,l,findcol(k,l,findbox(k,l,set)));
-                 //이제 후보군들이 들어옴
-                 while(!set.isEmpty()){
-                     arr[k][l]=set.iterator().next();
-                     set.remove(arr[k][l]);
-
-                 }
-             }
+        for(int[] a:arr){
+            for(int b:a){
+                System.out.print(b+" ");
             }
+            System.out.println();
         }
+
+
     }
 
-    //행 찾기
-    public static HashSet<Integer> findrow(int row, int col, HashSet<Integer> set){
-        for(int i=0;i<9;i++){
-            //0이 아닌 수를 삭제하고 들어올 수 있는 것들을 테스트
-            if(arr[row][i]!=0 && set.contains(arr[row][i])){
-                set.remove(arr[row][i]);
-            }
-        }
-        return set;
-    }
 
-    //열 찾기
-    public static HashSet<Integer> findcol(int row, int col, HashSet<Integer> set){
-        for(int i=0;i<9;i++){
-            if(arr[i][col]!=0 && set.contains(arr[i][col])){
-                set.remove(arr[i][col]);
-            }
-        }
-        return set;
-    }
-
-    //9칸 안에서 찾기
-    public static HashSet<Integer> findbox(int row, int col, HashSet<Integer> set){
-        int boxRow=row-row%3;
-        int boxCol=col-col%3;
-        for(int i=boxRow;i<boxRow+3;i++){
-            for(int j=boxCol;j<boxCol+3;j++){
-                if(arr[i][j]!=0 && set.contains(arr[i][j])){
-                    set.remove(arr[i][j]);
+    public static void backtracking(){
+        //return 조건
+        if(flag==false) return;
+        flag=false;
+        for(int i =0; i<9; i++){
+            for(int j=0;j<9;j++){
+                if(arr[i][j]==0){
+                    flag=true;
+                    cnt=0;
+                    int ans=0;
+                    for(int k=1;k<=9;k++) {
+                        if(findrow(i,k) && findcol(j,k) && findbox(i,j,k)){
+                            ans=k;
+                            //충족하는 수의 갯수 세기
+                            cnt++;
+                            if(cnt>1) break;
+                        }
+                    }
+                    //후보가 1개이면 바로 대입
+                    if(cnt==1){
+                        arr[i][j]=ans;
+                    }
                 }
             }
         }
-        return set;
+        //후보가 1개인거 다 넣었으면 다시 진행
+        if(flag)
+            backtracking();
     }
+
+    public static boolean findrow(int row,int num){
+        for(int i=0;i<9;i++){
+            if(arr[row][i]==num){
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public static boolean findcol(int col,int num){
+        for(int i=0;i<9;i++){
+            if(arr[i][col]==num){
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public static boolean findbox(int row,int col,int num){
+        for(int i=row/3*3;i<row/3*3+3;i++){
+            for(int j=col/3*3;j<col/3*3+3;j++){
+                if(arr[i][j]==num){
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
+
+
 
 }

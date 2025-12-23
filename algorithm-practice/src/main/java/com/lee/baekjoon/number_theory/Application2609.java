@@ -1,0 +1,25 @@
+package com.lee.baekjoon.number_theory;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
+
+public class Application2609 {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer st=new StringTokenizer(br.readLine());
+
+        int a=Integer.parseInt(st.nextToken());
+        int b=Integer.parseInt(st.nextToken());
+        int GCD=gcd(a,b);
+        int ans=a*b/GCD;
+        System.out.println(GCD);
+        System.out.println(ans);
+
+    }
+
+    public static int gcd(int a,int b){
+       return a==0?b:gcd(b%a,a);
+    }
+}
