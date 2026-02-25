@@ -143,5 +143,78 @@ HashMap은 일단 자바에서 키(key)와 값(Value)쌍을 저장하는 자료 
 - 음수 가중치가 존재하는 경우 다익스트라 알고리즘을 사용하면 잘못된 결과가 나온다.
 - 이 경우 벨만 포드(Bellman-Ford) 알고리즘을 사용해야 한다.
 
+---
 
+## LinkedHashMap
+### LinkedHashMap이란?
+
+### HashMap의 기능에 순서 유지 기능이 추가된 Map 구현체
+
+**LinkedHashMap은 HashMap을 상속받아 구현된 자료구조로,
+데이터의 삽입 순서 또는 접근 순서를 유지하는 것이 가장 큰 특징이다.**
+
+*HashMap은 저장된 요소의 **순서를 보장하지 않지만**,
+LinkedHashMap은 내부적으로 Hash Table + Doubly Linked List(이중 연결 리스트) 구조를 사용해 **순서를 유지한다.***
+
+### HashMap vs LinkedHashMap 차이
+
+| 구분     | HashMap    | LinkedHashMap                   |
+| ------ | ---------- | ------------------------------- |
+| 순서 보장  | ❌ 보장하지 않음  | ✅ 삽입 순서 또는 접근 순서 유지             |
+| 내부 구조  | Hash Table | Hash Table + Doubly Linked List |
+| 검색 속도  | O(1)       | O(1)                            |
+| 메모리 사용 | 상대적으로 적음   | 약간 더 사용                         |
+| 사용 목적  | 일반적인 Map   | 순서가 중요한 Map                     |
+
+
+- 키 기반 빠른 검색 → 평균 시간복잡도 O(1)
+
+- 삽입 순서를 유지할 수 있음
+
+- 접근 순서 기준으로 정렬하도록 설정 가능
+
+- HashMap과 거의 동일한 사용법
+
+- 순서를 유지하기 위해 추가적인 메모리를 사용
+
+## LinkedHashMap 생성자 파라미터
+`new LinkedHashMap<>(initialCapacity, loadFactor, accessOrder);`
+
+1. initialCapacity
+
+- 초기 해시 버킷 배열 크기
+
+- 기본값: 16
+
+- 내부 배열의 크기를 의미
+
+- 예상 데이터 수가 많으면 크게 설정 가능
+
+2. loadFactor (예: 0.75f)
+
+- 해시 테이블이 몇 % 찼을 때 내부 배열을 확장할지 결정하는 값
+
+예시:
+
+`16 × 0.75 = 12`
+
+→ 요소가 12개가 되면 내부 배열을 2배로 확장
+
+- 기본값: 0.75f
+
+- 성능과 메모리의 균형값
+
+- f는 float 타입을 의미
+
+3. accessOrder (true / false)
+
+- 순서 유지 기준 설정
+
+- false (기본값) → 삽입 순서 유지
+
+- true → 접근 순서 유지
+
+예시:
+
+`new LinkedHashMap<>(16, 0.75f, false); // 삽입 순서 유지`
 
