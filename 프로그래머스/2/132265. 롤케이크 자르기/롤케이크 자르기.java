@@ -2,24 +2,30 @@ import java.util.*;
 class Solution {
     public int solution(int[] topping) {
         int answer = 0;
-        Map<Integer,Integer>map=new HashMap<>();
-        for(int i=0; i<topping.length;i++){
-            int a=topping[i];
-            map.put(a,map.getOrDefault(a,0)+1);
-        }
-        
         Set<Integer>set=new HashSet<>();
-        for(int j=0;j<topping.length;j++){
-            int top=topping[j];
+        int std=0;
+        int n=topping.length;
+        while(std<n){
+            if(set.size()>n-std)break;
+            int top=topping[std];
             set.add(top);
-            map.put(top,map.get(top)-1);
-            if(map.get(top)==0){
-                map.remove(top);
+            int stdd=std+1;
+            Set<Integer>s=new HashSet<>();
+            while(stdd<n){
+                int t=topping[stdd];
+                s.add(t);
+                if(s.size()>set.size()){
+                    break;
+                }
+                stdd++;
             }
-            if(map.size()==set.size())answer++;
-            
+            if(s.size()==set.size()){
+                answer++;
+            }
+            std++;
         }
-        
         return answer;
     }
 }
+
+ 
