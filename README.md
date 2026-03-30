@@ -225,6 +225,7 @@ LinkedHashMap은 내부적으로 Hash Table + Doubly Linked List(이중 연결 �
 |  |
 | ------- |
 | [0013-roman-to-integer](https://github.com/L-dragon-woo/algorithm-practice/tree/master/0013-roman-to-integer) |
+| [0383-ransom-note](https://github.com/L-dragon-woo/algorithm-practice/tree/master/0383-ransom-note) |
 ## Math
 |  |
 | ------- |
@@ -237,9 +238,14 @@ LinkedHashMap은 내부적으로 Hash Table + Doubly Linked List(이중 연결 �
 | [0058-length-of-last-word](https://github.com/L-dragon-woo/algorithm-practice/tree/master/0058-length-of-last-word) |
 | [0125-valid-palindrome](https://github.com/L-dragon-woo/algorithm-practice/tree/master/0125-valid-palindrome) |
 | [0151-reverse-words-in-a-string](https://github.com/L-dragon-woo/algorithm-practice/tree/master/0151-reverse-words-in-a-string) |
+| [0383-ransom-note](https://github.com/L-dragon-woo/algorithm-practice/tree/master/0383-ransom-note) |
 ## Two Pointers
 |  |
 | ------- |
 | [0125-valid-palindrome](https://github.com/L-dragon-woo/algorithm-practice/tree/master/0125-valid-palindrome) |
 | [0151-reverse-words-in-a-string](https://github.com/L-dragon-woo/algorithm-practice/tree/master/0151-reverse-words-in-a-string) |
+## Counting
+|  |
+| ------- |
+| [0383-ransom-note](https://github.com/L-dragon-woo/algorithm-practice/tree/master/0383-ransom-note) |
 <!---LeetCode Topics End-->
