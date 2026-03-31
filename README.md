@@ -239,13 +239,19 @@ LinkedHashMap은 내부적으로 Hash Table + Doubly Linked List(이중 연결 �
 | [0125-valid-palindrome](https://github.com/L-dragon-woo/algorithm-practice/tree/master/0125-valid-palindrome) |
 | [0151-reverse-words-in-a-string](https://github.com/L-dragon-woo/algorithm-practice/tree/master/0151-reverse-words-in-a-string) |
 | [0383-ransom-note](https://github.com/L-dragon-woo/algorithm-practice/tree/master/0383-ransom-note) |
+| [0392-is-subsequence](https://github.com/L-dragon-woo/algorithm-practice/tree/master/0392-is-subsequence) |
 ## Two Pointers
 |  |
 | ------- |
 | [0125-valid-palindrome](https://github.com/L-dragon-woo/algorithm-practice/tree/master/0125-valid-palindrome) |
 | [0151-reverse-words-in-a-string](https://github.com/L-dragon-woo/algorithm-practice/tree/master/0151-reverse-words-in-a-string) |
+| [0392-is-subsequence](https://github.com/L-dragon-woo/algorithm-practice/tree/master/0392-is-subsequence) |
 ## Counting
 |  |
 | ------- |
 | [0383-ransom-note](https://github.com/L-dragon-woo/algorithm-practice/tree/master/0383-ransom-note) |
+## Dynamic Programming
+|  |
+| ------- |
+| [0392-is-subsequence](https://github.com/L-dragon-woo/algorithm-practice/tree/master/0392-is-subsequence) |
 <!---LeetCode Topics End-->
