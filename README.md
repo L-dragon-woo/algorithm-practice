@@ -254,4 +254,20 @@ LinkedHashMap은 내부적으로 Hash Table + Doubly Linked List(이중 연결 �
 |  |
 | ------- |
 | [0392-is-subsequence](https://github.com/L-dragon-woo/algorithm-practice/tree/master/0392-is-subsequence) |
+## Tree
+|  |
+| ------- |
+| [0637-average-of-levels-in-binary-tree](https://github.com/L-dragon-woo/algorithm-practice/tree/master/0637-average-of-levels-in-binary-tree) |
+## Depth-First Search
+|  |
+| ------- |
+| [0637-average-of-levels-in-binary-tree](https://github.com/L-dragon-woo/algorithm-practice/tree/master/0637-average-of-levels-in-binary-tree) |
+## Breadth-First Search
+|  |
+| ------- |
+| [0637-average-of-levels-in-binary-tree](https://github.com/L-dragon-woo/algorithm-practice/tree/master/0637-average-of-levels-in-binary-tree) |
+## Binary Tree
+|  |
+| ------- |
+| [0637-average-of-levels-in-binary-tree](https://github.com/L-dragon-woo/algorithm-practice/tree/master/0637-average-of-levels-in-binary-tree) |
 <!---LeetCode Topics End-->
