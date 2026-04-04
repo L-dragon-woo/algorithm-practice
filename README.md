@@ -230,6 +230,7 @@ LinkedHashMap은 내부적으로 Hash Table + Doubly Linked List(이중 연결 �
 |  |
 | ------- |
 | [0013-roman-to-integer](https://github.com/L-dragon-woo/algorithm-practice/tree/master/0013-roman-to-integer) |
+| [0070-climbing-stairs](https://github.com/L-dragon-woo/algorithm-practice/tree/master/0070-climbing-stairs) |
 ## String
 |  |
 | ------- |
@@ -253,6 +254,7 @@ LinkedHashMap은 내부적으로 Hash Table + Doubly Linked List(이중 연결 �
 ## Dynamic Programming
 |  |
 | ------- |
+| [0070-climbing-stairs](https://github.com/L-dragon-woo/algorithm-practice/tree/master/0070-climbing-stairs) |
 | [0392-is-subsequence](https://github.com/L-dragon-woo/algorithm-practice/tree/master/0392-is-subsequence) |
 ## Tree
 |  |
@@ -278,4 +280,8 @@ LinkedHashMap은 내부적으로 Hash Table + Doubly Linked List(이중 연결 �
 |  |
 | ------- |
 | [0530-minimum-absolute-difference-in-bst](https://github.com/L-dragon-woo/algorithm-practice/tree/master/0530-minimum-absolute-difference-in-bst) |
+## Memoization
+|  |
+| ------- |
+| [0070-climbing-stairs](https://github.com/L-dragon-woo/algorithm-practice/tree/master/0070-climbing-stairs) |
 <!---LeetCode Topics End-->
