@@ -233,6 +233,7 @@ LinkedHashMap은 내부적으로 Hash Table + Doubly Linked List(이중 연결 �
 ## Math
 |  |
 | ------- |
+| [0009-palindrome-number](https://github.com/L-dragon-woo/algorithm-practice/tree/master/0009-palindrome-number) |
 | [0013-roman-to-integer](https://github.com/L-dragon-woo/algorithm-practice/tree/master/0013-roman-to-integer) |
 | [0070-climbing-stairs](https://github.com/L-dragon-woo/algorithm-practice/tree/master/0070-climbing-stairs) |
 | [0202-happy-number](https://github.com/L-dragon-woo/algorithm-practice/tree/master/0202-happy-number) |
