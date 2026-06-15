@@ -264,6 +264,7 @@ LinkedHashMap은 내부적으로 Hash Table + Doubly Linked List(이중 연결 �
 | [0151-reverse-words-in-a-string](https://github.com/L-dragon-woo/algorithm-practice/tree/master/0151-reverse-words-in-a-string) |
 | [0202-happy-number](https://github.com/L-dragon-woo/algorithm-practice/tree/master/0202-happy-number) |
 | [0392-is-subsequence](https://github.com/L-dragon-woo/algorithm-practice/tree/master/0392-is-subsequence) |
+| [2095-delete-the-middle-node-of-a-linked-list](https://github.com/L-dragon-woo/algorithm-practice/tree/master/2095-delete-the-middle-node-of-a-linked-list) |
 ## Counting
 |  |
 | ------- |
@@ -320,6 +321,7 @@ LinkedHashMap은 내부적으로 Hash Table + Doubly Linked List(이중 연결 �
 | [0002-add-two-numbers](https://github.com/L-dragon-woo/algorithm-practice/tree/master/0002-add-two-numbers) |
 | [0021-merge-two-sorted-lists](https://github.com/L-dragon-woo/algorithm-practice/tree/master/0021-merge-two-sorted-lists) |
 | [0141-linked-list-cycle](https://github.com/L-dragon-woo/algorithm-practice/tree/master/0141-linked-list-cycle) |
+| [2095-delete-the-middle-node-of-a-linked-list](https://github.com/L-dragon-woo/algorithm-practice/tree/master/2095-delete-the-middle-node-of-a-linked-list) |
 ## Recursion
 |  |
 | ------- |
